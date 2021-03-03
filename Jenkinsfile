@@ -30,7 +30,7 @@ node {
       }
    }
    stage('Deploy') {
-      sh 'curl -u jenkins:jenkins -T target/**.war "http://localhost:8080/manager/text/deploy?path=/devops&update=true'
+      sh 'curl -u jenkins:jenkins -T target/**.war "http://localhost:8080/manager/text/deploy?path=/devops&update=true"'
    }
    stage("Somke Test"){
       sh "curl --retry-delay 10 --retry 5 http://localhost:8080/devops"
