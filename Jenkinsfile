@@ -19,7 +19,7 @@ node {
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean verify"
       } else {
-         bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean verify")
+         bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean verify"/)
       }
    }
    stage('Sonar') {
